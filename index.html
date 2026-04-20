@@ -357,6 +357,77 @@ nav { border-bottom: 3px solid; border-image: linear-gradient(90deg,#7209B7,#B51
 .hero-topline,.hero-top-line { background: linear-gradient(90deg,#7209B7,#B5179E,#F72585); }
 .cta-sec::after,.cta-section::after { background: linear-gradient(90deg,transparent,#F72585,transparent); }
 
+
+/* MOBILE + HEADER OPTIMIZATION OVERRIDES */
+.accred-bar{padding:12px 0 10px}
+.accred-bar-inner{gap:14px;align-items:center}
+.accred-logos{justify-content:flex-start;row-gap:10px}
+.accred-logos > a img{height:34px}
+.accred-logo-item img{height:30px}
+.nav-right{margin-left:auto}
+nav{justify-content:flex-end;gap:16px}
+.nav-logo{display:none !important}
+
+.lab-photo img{content-visibility:auto;background:#fff}
+
+@media (max-width: 1024px){
+  .lab-grid{grid-template-columns:1fr;gap:18px}
+  .lab-photo{padding:14px}
+}
+
+@media (max-width: 768px){
+  .accred-bar{padding:10px 0 8px}
+  .accred-bar-inner{padding:0 12px;justify-content:center;gap:10px}
+  .accred-logos{justify-content:center;gap:10px 12px;width:100%}
+  .accred-logos > a{width:100%;display:flex;justify-content:center}
+  .accred-logos > a img{height:28px;max-width:78vw}
+  .accred-divider{display:none}
+  .accred-logo-item img{height:22px;max-width:22vw}
+  nav{padding:0 12px;height:auto;min-height:58px;justify-content:flex-end}
+  .nav-right{width:100%;justify-content:space-between;gap:10px;flex-wrap:nowrap}
+  .lang-toggle{flex:0 0 auto}
+  .lang-btn{padding:8px 14px;font-size:12px}
+  .nav-cta{padding:11px 18px;font-size:12px}
+  .hero{min-height:auto}
+  .hero-inner{padding:84px 16px 44px;gap:20px}
+  .hero-copy{padding:18px 16px;border-radius:20px;max-width:100%}
+  .hero-pill{font-size:10px;letter-spacing:1px;padding:7px 12px;margin-bottom:18px}
+  h1{font-size:clamp(30px,10vw,42px);line-height:1.08;max-width:100%}
+  .hero-sub{font-size:15px;margin-bottom:16px}
+  .hero-p{font-size:15px;line-height:1.7;margin-bottom:22px;max-width:100%}
+  .hero-btns{gap:10px;margin-bottom:20px}
+  .btn-r,.btn-g{width:100%;justify-content:center;padding:14px 18px}
+  .hero-trust{gap:8px}
+  .tc{font-size:11px;padding:7px 10px}
+  .who-card{min-height:360px;border-radius:18px}
+  .who-card-content{padding:22px 18px}
+  .who-card h3{font-size:20px}
+  .who-card p{font-size:14px;max-width:100%}
+  .lab-photo img{aspect-ratio:4/3;border-radius:12px}
+  .lab-point{padding:16px 14px;border-radius:14px}
+  .lab-badge{width:40px;height:40px;font-size:16px}
+  .lab-point h4{font-size:15px}
+  .lab-point p{font-size:12px}
+  .faq-grid{gap:12px}
+  .faq-i{padding:18px}
+  .wa-fab{right:14px;bottom:14px;z-index:9999}
+  [dir="rtl"] .wa-fab{left:14px;right:auto}
+  .wa-btn{width:54px;height:54px;min-width:54px}
+  .wa-btn svg{width:24px;height:24px}
+}
+
+@media (max-width: 480px){
+  section{padding:48px 14px}
+  .sec-desc{font-size:15px;line-height:1.75}
+  h2{font-size:clamp(26px,9vw,38px);margin-bottom:14px}
+  .nav-cta{padding:11px 16px;border-radius:999px}
+  .hero-inner{padding:80px 14px 40px}
+  .hero-copy{padding:16px 14px}
+  .hero-price{width:100%;padding:14px}
+  .hp-price{font-size:32px}
+  .cta-contact{gap:14px}
+}
+
 </style>
 </head>
 <body>
@@ -374,16 +445,13 @@ nav { border-bottom: 3px solid; border-image: linear-gradient(90deg,#7209B7,#B51
     </div>
     <div class="accred-tagline">
       <strong data-en="Because every result matters" data-ar="لأن كل نتيجة تهم">Because every result matters</strong>
-      <span data-en="Trusted Since 2017 · Abu Dhabi" data-ar="موثوق به منذ 2017 · أبوظبي">Trusted Since 2017 · Abu Dhabi
+      <span data-en="Trusted Since 2017 · Abu Dhabi" data-ar="موثوق به منذ 2017 · أبوظبي">Trusted Since 2017 · Abu Dhabi</span>
     </div>
   </div>
 </div>
 
 <!-- NAV -->
 <nav>
-  <a href="https://accuracyplusmedlab.com" class="nav-logo">
-    <img src="https://accuracyplusmedlab.com/wp-content/uploads/2024/11/accuracy_plus.png" alt="Accuracy Plus" height="32" loading="eager">
-  </a>
   <div class="nav-right">
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('en')" aria-pressed="true">EN</button>
@@ -595,7 +663,7 @@ nav { border-bottom: 3px solid; border-image: linear-gradient(90deg,#7209B7,#B51
     <p class="sec-desc" data-en="Reliable prenatal screening supported by international quality standards, experienced staff, and a patient-friendly reception environment in Abu Dhabi." data-ar="فحص موثوق قبل الولادة مدعوم بمعايير جودة دولية وفريق خبير وبيئة استقبال مريحة في أبوظبي.">Reliable prenatal screening supported by international quality standards, experienced staff, and a patient-friendly reception environment in Abu Dhabi.</p>
     <div class="lab-grid">
       <div class="lab-photo">
-        <img src="AP- Al Madeena Voucher.png" alt="Accuracy Plus Medical Laboratory reception" loading="lazy">
+        <img src="2.jpg" alt="Accuracy Plus Medical Laboratory reception" loading="lazy">
       </div>
       <div class="lab-points">
         <div class="lab-point"><div class="lab-badge">✓</div><div><h4 data-en="CAP Accredited" data-ar="معتمد CAP">CAP Accredited</h4><p data-en="Processes aligned to recognised international laboratory quality standards for dependable reporting." data-ar="إجراءات متوافقة مع معايير الجودة المخبرية الدولية المعترف بها لضمان تقارير موثوقة.">Processes aligned to recognised international laboratory quality standards for dependable reporting.</p></div></div>
